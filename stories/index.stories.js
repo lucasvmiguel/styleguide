@@ -4,15 +4,15 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import Component from "../src/Component";
-import CardNumber from "../src/CardNumber";
-import CardIcon from "../src/CardIcon";
-import Card from "../src/Card";
-import Button from "../src/Button";
-import ButtonFixed from "../src/ButtonFixed";
-import BadgeIcon from "../src/BadgeIcon";
-import Loading from "../src/Loading";
-import Navbar from "../src/Navbar";
+import Component from "styleguid/Component";
+import CardNumber from "styleguid/CardNumber";
+import CardIcon from "styleguid/CardIcon";
+import Card from "styleguid/Card";
+import Button from "styleguid/Button";
+import ButtonFixed from "styleguid/ButtonFixed";
+import BadgeIcon from "styleguid/BadgeIcon";
+import Loading from "styleguid/Loading";
+import Navbar from "styleguid/Navbar";
 
 storiesOf("Card", module)
   .add("default", () => (
