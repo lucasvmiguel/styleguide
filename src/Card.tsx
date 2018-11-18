@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
+
+import { boxShadow } from "./config";
 import "./materialize.css";
 import "./materialize.js";
 
@@ -31,8 +33,7 @@ export class Card extends React.Component<IProps> {
 
 const styles = StyleSheet.create({
   card: {
-    "-webkit-box-shadow": "0 6px 20px 0 rgba(82,82,82,.1)",
-    boxShadow: "0 6px 20px 0 rgba(82,82,82,.1)"
+    boxShadow
   },
   cardTitle: {
     fontSize: 20

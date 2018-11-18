@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
+
+import { backgroundGradient, boxShadowWithColor } from "./config";
 import "./materialize.css";
 import "./materialize.js";
 
@@ -28,8 +30,8 @@ export class ButtonFixed extends React.Component<IProps> {
 
 const styles = StyleSheet.create({
   button: {
-    background: "linear-gradient(45deg,#1e88e5,#64b5f6)",
-    boxShadow: "0 6px 20px 0 rgba(30,136,229,.5)"
+    background: backgroundGradient,
+    boxShadow: boxShadowWithColor
   },
   fixed: {
     bottom: 23,

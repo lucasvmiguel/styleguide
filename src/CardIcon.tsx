@@ -1,6 +1,13 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
+
+import {
+  backgroundGradient,
+  backgroundGradientOpaque,
+  boxShadowWithColor,
+  textColorWithGradient
+} from "./config";
 import "./materialize.css";
 import "./materialize.js";
 
@@ -47,24 +54,24 @@ export class CardIcon extends React.Component<IProps> {
 
 const styles = StyleSheet.create({
   cardMessage: {
-    color: "white",
+    color: textColorWithGradient,
     fontSize: 16
   },
   cardIcon: {
-    color: "white",
+    color: textColorWithGradient,
     fontSize: 54,
     fontWeight: 200
   },
   cardTitle: {
-    color: "white",
+    color: textColorWithGradient,
     fontSize: 20
   },
   gradient: {
-    background: "linear-gradient(45deg, #1e88e5 0%, #64b5f6 100%)",
-    boxShadow: "0 6px 20px 0 rgba(30, 136, 229, 0.5)"
+    background: backgroundGradient,
+    boxShadow: boxShadowWithColor
   },
   icon: {
-    backgroundColor: "rgba(100, 181, 246, 0.5)",
+    backgroundColor: backgroundGradientOpaque,
     borderRadius: "3rem",
     cursor: "pointer",
     height: "6rem",

@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
+
+import { backgroundGradient, textColorWithGradient } from "./config";
 import "./materialize.css";
 import "./materialize.js";
 
@@ -23,13 +25,10 @@ export class BadgeIcon extends React.Component<IProps> {
     return (
       <span
         data-tooltip={tooltip}
-        className={`${css(styles.badge)} ${tooltip &&
-          "tooltipped"} right white-text`}
+        className={`${css(styles.badge)} ${tooltip && "tooltipped"} right`}
       >
         {message}
-        <i className={`${css(styles.icon)} material-icons white-text left`}>
-          {icon}
-        </i>
+        <i className={`${css(styles.icon)} material-icons left`}>{icon}</i>
       </span>
     );
   }
@@ -42,14 +41,14 @@ const styles = StyleSheet.create({
       marginTop: 5,
       width: 55
     },
-    background: "linear-gradient(45deg, #1e88e5 0%, #64b5f6 100%)",
+    background: backgroundGradient,
     borderRadius: 2,
-    color: "white",
+    color: textColorWithGradient,
     fontSize: 14,
     height: 32,
     lineHeight: "33px",
     marginLeft: 5,
-    marginTop: 6,
+    // marginTop: 6,
     textAlign: "center",
     width: 80
   },

@@ -1,6 +1,8 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
+
+import { backgroundGradient } from "./config";
 import "./materialize.css";
 import "./materialize.js";
 
@@ -28,7 +30,7 @@ export class Button extends React.Component<IProps> {
 
 const styles = StyleSheet.create({
   button: {
-    background: "linear-gradient(45deg,#1e88e5,#64b5f6)"
+    background: backgroundGradient
   }
 });
 

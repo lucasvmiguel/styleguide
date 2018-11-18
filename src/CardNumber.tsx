@@ -1,8 +1,15 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
-import './materialize.css'
-import './materialize.js'
+
+import {
+  backgroundGradient,
+  backgroundGradientOpaque,
+  boxShadowWithColor,
+  textColorWithGradient
+} from "./config";
+import "./materialize.css";
+import "./materialize.js";
 
 interface IProps {
   title?: string;
@@ -14,9 +21,9 @@ interface IProps {
 
 export class CardNumber extends React.Component<IProps> {
   public componentDidMount() {
-      const elems = document.querySelectorAll('.tooltipped');
-      // @ts-ignore
-      const instances = M.Tooltip.init(elems, {});
+    const elems = document.querySelectorAll(".tooltipped");
+    // @ts-ignore
+    const instances = M.Tooltip.init(elems, {});
   }
 
   public render() {
@@ -53,21 +60,21 @@ export class CardNumber extends React.Component<IProps> {
 
 const styles = StyleSheet.create({
   cardNumber: {
-    color: "white",
+    color: textColorWithGradient,
     fontSize: 54,
     fontWeight: 200,
     textAlign: "right"
   },
   cardTitle: {
-    color: "white",
+    color: textColorWithGradient,
     fontSize: 20
   },
   gradient: {
-    background: "linear-gradient(45deg, #1e88e5 0%, #64b5f6 100%)",
-    boxShadow: "0 6px 20px 0 rgba(30, 136, 229, 0.5)"
+    background: backgroundGradient,
+    boxShadow: boxShadowWithColor
   },
   icon: {
-    backgroundColor: "rgba(100, 181, 246, 0.5)",
+    backgroundColor: backgroundGradientOpaque,
     borderRadius: "1.75rem",
     cursor: "pointer",
     height: "3.5rem",
