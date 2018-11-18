@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
-import './materialize.css'
-import './materialize.js'
+import "./materialize.css";
+import "./materialize.js";
 
 interface IProps {
   message?: string | number;
@@ -12,7 +12,7 @@ interface IProps {
 
 export class BadgeIcon extends React.Component<IProps> {
   public componentDidMount() {
-    const elems = document.querySelectorAll('.tooltipped');
+    const elems = document.querySelectorAll(".tooltipped");
     // @ts-ignore
     const instances = M.Tooltip.init(elems, {});
   }
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     fontSize: "1.3rem",
     lineHeight: "33px",
     marginRight: 0,
-    paddingLeft: 15
+    paddingLeft: 5
   }
 });
 

@@ -1,8 +1,8 @@
 import * as React from "react";
 
 import { css, StyleSheet } from "aphrodite";
-import './materialize.css'
-import './materialize.js'
+import "./materialize.css";
+import "./materialize.js";
 
 interface IProps {
   title: string;
@@ -14,9 +14,9 @@ interface IProps {
 
 export class CardIcon extends React.Component<IProps> {
   public componentDidMount() {
-      const elems = document.querySelectorAll('.tooltipped');
-      // @ts-ignore
-      const instances = M.Tooltip.init(elems, {});
+    const elems = document.querySelectorAll(".tooltipped");
+    // @ts-ignore
+    const instances = M.Tooltip.init(elems, {});
   }
 
   public render() {
@@ -25,8 +25,8 @@ export class CardIcon extends React.Component<IProps> {
     return (
       <div className={`${css(styles.gradient)} card`}>
         <div className="card-content center">
-          <p className={css(styles.cardIcon)} >
-          <span onClick={onClick}>
+          <p className={css(styles.cardIcon)}>
+            <span onClick={onClick}>
               <i
                 className={`${css(
                   styles.icon
@@ -35,15 +35,9 @@ export class CardIcon extends React.Component<IProps> {
               >
                 {icon}
               </i>
-
             </span>
-              <p className={css(styles.cardTitle)}>
-                {title}
-              </p>
-              {message && 
-                <p className={css(styles.cardMessage)}>
-                  {message}
-                </p>}
+            <p className={css(styles.cardTitle)}>{title}</p>
+            {message && <p className={css(styles.cardMessage)}>{message}</p>}
           </p>
         </div>
       </div>
@@ -59,7 +53,7 @@ const styles = StyleSheet.create({
   cardIcon: {
     color: "white",
     fontSize: 54,
-    fontWeight: 200,
+    fontWeight: 200
   },
   cardTitle: {
     color: "white",
