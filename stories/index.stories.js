@@ -24,4 +24,3 @@ storiesOf('Badge', module)
     <Component>
       <BadgeIcon tooltop='whatever' message='99%' icon='play_arrow' />
     </Component>));
-
